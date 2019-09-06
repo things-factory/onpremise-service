@@ -3,7 +3,7 @@ var ip = require('ip')
 var mdns = require('mdns')
 var ad
 
-process.on('bootstrap-module-middleware' as any, app => {
+process.on('bootstrap-module-middleware' as any, async app => {
   /* app에 middleware를 추가할 수 있다. */
   var servicePort = process.env.PORT
   var ipAddress = ip.address()
